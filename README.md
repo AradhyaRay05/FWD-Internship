@@ -195,6 +195,7 @@ Online Quiz Application/
 ├── index.html          # Main HTML file
 ├── style.css           # Styling and animations
 ├── app.js              # Application logic
+├── LICENSE             # Allows reuse, with attribution, no warranty
 └── README.md           # This documentation
 ```
 
@@ -202,7 +203,7 @@ Online Quiz Application/
 
 ## 📜 License
 
-This project is open source and available under the MIT License.
+This project is open source and licensed under the [MIT License](LICENSE).
 
 ---
 
