@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizora - Online Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading Quizora...</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🎯</span>
+                <span class="brand-text">Quizora</span>
+            </div>
+            <div class="nav-menu">
+                <button id="soundToggle" class="sound-toggle" aria-label="Toggle sound">
+                    <span class="sound-icon">🔊</span>
+                </button>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <div class="user-info" id="userInfo">
+                    <span id="userName"></span>
+                    <button id="logoutBtn" class="btn-logout">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Login/Signup Screen -->
+        <div id="authScreen" class="screen auth-screen">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Welcome Back!</h2>
+                    <form id="loginFormElement">
+                        <div class="form-group">
+                            <input type="text" id="loginUsername" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="loginPassword" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                
+                <!-- Signup Form -->
+                <div id="signupForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <form id="signupFormElement">
+                        <div class="form-group">
+                            <input type="text" id="signupUsername" placeholder="Choose Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signupEmail" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signupPassword" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Screen -->
+        <div id="dashboardScreen" class="screen dashboard-screen">
+            <div class="dashboard-header">
+                <h1>Welcome, <span id="dashboardUsername"></span>!</h1>
+                <p>Ready to test your knowledge?</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Quick Stats -->
+                <div class="dashboard-card stats-card">
+                    <h3>📊 Your Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value" id="totalQuizzes">0</span>
+                            <span class="stat-label">Quizzes Taken</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="avgScore">0%</span>
+                            <span class="stat-label">Average Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="bestScore">0%</span>
+                            <span class="stat-label">Best Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="userPoints">0</span>
+                            <span class="stat-label">Total Points</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Quiz Card -->
+                <div class="dashboard-card action-card">
+                    <h3>🚀 Start New Quiz</h3>
+                    <button id="startQuizBtn" class="btn btn-primary btn-large">
+                        Configure & Start Quiz
+                    </button>
+                    <button id="offlineQuizBtn" class="btn btn-secondary">
+                        Play Offline Quiz
+                    </button>
+                </div>
+
+                <!-- Leaderboard Preview -->
+                <div class="dashboard-card leaderboard-card">
+                    <h3>🏆 Top Players</h3>
+                    <div id="leaderboardPreview" class="leaderboard-list">
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-card activity-card">
+                    <h3>📝 Recent Quizzes</h3>
+                    <div id="recentActivity" class="activity-list">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Setup Screen -->
+        <div id="setupScreen" class="screen setup-screen">
+            <div class="setup-container">
+                <h2>Configure Your Quiz</h2>
+                
+                <form id="quizSetupForm">
+                    <div class="setup-grid">
+                        <!-- Category Selection -->
+                        <div class="setup-group">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="">Any Category</option>
+                                <option value="9">General Knowledge</option>
+                                <option value="10">Books</option>
+                                <option value="11">Film</option>
+                                <option value="12">Music</option>
+                                <option value="13">Theatre</option>
+                                <option value="14">Television</option>
+                                <option value="15">Video Games</option>
+                                <option value="16">Board Games</option>
+                                <option value="17">Science & Nature</option>
+                                <option value="18">Computers</option>
+                                <option value="19">Mathematics</option>
+                                <option value="20">Mythology</option>
+                                <option value="21">Sports</option>
+                                <option value="22">Geography</option>
+                                <option value="23">History</option>
+                                <option value="24">Politics</option>
+                                <option value="25">Art</option>
+                                <option value="26">Celebrities</option>
+                                <option value="27">Animals</option>
+                                <option value="28">Vehicles</option>
+                            </select>
+                        </div>
+
+                        <!-- Difficulty Selection -->
+                        <div class="setup-group">
+                            <label for="difficulty">Difficulty</label>
+                            <select id="difficulty" required>
+                                <option value="">Any Difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+
+                        <!-- Number of Questions -->
+                        <div class="setup-group">
+                            <label for="numQuestions">Number of Questions</label>
+                            <select id="numQuestions" required>
+                                <option value="5">5 Questions (Quick)</option>
+                                <option value="10">10 Questions</option>
+                                <option value="15">15 Questions</option>
+                                <option value="20">20 Questions</option>
+                                <option value="30">30 Questions</option>
+                                <option value="40">40 Questions (Long)</option>
+                                <option value="50">50 Questions (Marathon)</option>
+                            </select>
+                        </div>
+
+                        <!-- Timer Setting -->
+                        <div class="setup-group">
+                            <label for="timePerQuestion">Time per Question</label>
+                            <select id="timePerQuestion" required>
+                                <option value="15">15 seconds</option>
+                                <option value="20">20 seconds</option>
+                                <option value="30">30 seconds</option>
+                                <option value="45">45 seconds</option>
+                                <option value="60">60 seconds</option>
+                                <option value="0">No Timer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="setup-actions">
+                        <button type="button" id="backToDashboard" class="btn btn-secondary">
+                            Back to Dashboard
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Start Quiz
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <span id="questionNumber">Question 1 of 10</span>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="quiz-timer">
+                    <span class="timer-icon">⏱️</span>
+                    <span id="timer">30</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div class="question-container">
+                    <h2 id="questionText"></h2>
+                </div>
+                <div id="answersContainer" class="answers-container">
+                </div>
+                <div class="quiz-actions">
+                    <button id="nextQuestion" class="btn btn-primary" disabled>
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen results-screen">
+            <div class="results-container">
+                <div class="results-header">
+                    <h1>Quiz Complete!</h1>
+                    <div class="score-circle">
+                        <div class="score-value">
+                            <span id="finalScore">0</span>
+                            <span class="score-percent">%</span>
+                        </div>
+                        <div class="score-label">Your Score</div>
+                    </div>
+                </div>
+
+                <div class="results-stats">
+                    <div class="result-stat">
+                        <span class="stat-icon">✅</span>
+                        <span class="stat-text">Correct: <span id="correctAnswers">0</span></span>
+                    </div>
+                    <div class="result-stat">
+                        <span class="stat-icon">❌</span>
+                        <span class="stat-text">Wrong: <span id="wrongAnswers">0</span></span>
+                    </div>
+                    <div class="result-stat">
+                        <span class="stat-icon">⏱️</span>
+                        <span class="stat-text">Time: <span id="totalTime">0:00</span></span>
+                    </div>
+                    <div class="result-stat">
+                        <span class="stat-icon">🏆</span>
+                        <span class="stat-text">Points Earned: <span id="pointsEarned">0</span></span>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="reviewQuiz" class="btn btn-secondary">
+                        Review Answers
+                    </button>
+                    <button id="newQuiz" class="btn btn-primary">
+                        New Quiz
+                    </button>
+                    <button id="backHome" class="btn btn-outline">
+                        Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Screen -->
+        <div id="reviewScreen" class="screen review-screen">
+            <div class="review-container">
+                <h2>Quiz Review</h2>
+                <div id="reviewContent" class="review-content">
+                </div>
+                <div class="review-actions">
+                    <button id="backToResults" class="btn btn-secondary">
+                        Back to Results
+                    </button>
+                    <button id="reviewNewQuiz" class="btn btn-primary">
+                        New Quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
