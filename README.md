@@ -195,6 +195,7 @@ Online Quiz Application/
 ├── index.html          # Main HTML file
 ├── style.css           # Styling and animations
 ├── app.js              # Application logic
+├── .gitignore          # Files/directories to exclude from Git tracking
 ├── LICENSE             # Allows reuse, with attribution, no warranty
 └── README.md           # This documentation
 ```
