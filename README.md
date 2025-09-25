@@ -40,29 +40,6 @@ A comprehensive, interactive online quiz application built with HTML, CSS, and J
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Internet connection (for online quizzes)
 
-### Installation
-1. Download or clone the project files
-2. Ensure you have these files:
-   - `index.html`
-   - `style.css`
-   - `app.js`
-3. Open `index.html` in your web browser
-
-### Alternative: Local Server
-For the best experience, run a local server:
-
-#### Using Python:
-```bash
-python -m http.server 8080
-```
-
-#### Using Node.js:
-```bash
-npx serve .
-```
-
-Then visit `http://localhost:8080` in your browser.
-
 ## 📖 How to Use
 
 ### 1. Getting Started
