@@ -153,11 +153,6 @@ The application is fully responsive and works on:
 - **JavaScript (ES6+)**: Application logic and interactivity
 - **Web APIs**: Local Storage, Fetch API, Web Audio API
 
-### Browser Compatibility
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
 
 ### Performance Features
 - Lazy loading of questions
@@ -171,7 +166,6 @@ The application is fully responsive and works on:
 - **User Profiles**: Avatar upload and customization
 - **Social Features**: Share scores, challenge friends
 - **Study Mode**: Flashcards and learning materials
-- **Analytics**: Detailed performance insights
 - **Custom Quizzes**: Create and share your own quizzes
 - **Multiplayer Mode**: Real-time quiz competitions
 - **Mobile App**: Native iOS and Android versions
