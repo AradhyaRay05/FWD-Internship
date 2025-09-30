@@ -116,6 +116,8 @@ The application includes diverse questions across:
 - **Technology**: Programming, devices, internet, innovations
 - **Entertainment**: Movies, music, celebrities, TV shows
 
+---
+
 ## 🌐 API Integration
 
 ### Online Mode
