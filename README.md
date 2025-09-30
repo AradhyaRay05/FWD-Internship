@@ -101,6 +101,8 @@ A comprehensive, interactive online quiz application built with HTML, CSS, and J
 - Track your improvement over time
 - Unlock achievements for high scores
 
+---
+
 ## 🎯 Question Categories
 
 The application includes diverse questions across:
