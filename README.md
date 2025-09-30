@@ -157,6 +157,8 @@ The application is fully responsive and works on:
 - High contrast mode
 - Clear visual hierarchy
 
+---
+
 ## 🔧 Technical Details
 
 ### Technologies Used
@@ -171,6 +173,8 @@ The application is fully responsive and works on:
 - Optimized animations
 - Minimal external dependencies
 - Fast loading times
+
+---
 
 ## 🚧 Future Enhancements
 
