@@ -80,6 +80,8 @@ A comprehensive, interactive online quiz application built with HTML, CSS, and J
 - **Sound**: Enable/disable sound effects using the speaker icon
 - **Settings**: Preferences are saved automatically
 
+---
+
 ## 🎮 Scoring System
 
 ### Points Calculation
