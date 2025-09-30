@@ -132,12 +132,16 @@ The application includes diverse questions across:
 - Works without internet
 - Perfect for practice sessions
 
+---
+
 ## 📱 Responsive Design
 
 The application is fully responsive and works on:
 - **Desktop**: Full-featured experience
 - **Tablet**: Touch-optimized interface
 - **Mobile**: Mobile-first design with optimized layouts
+
+---
 
 ## 🎨 Themes & Accessibility
 
