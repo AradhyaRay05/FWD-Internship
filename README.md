@@ -34,6 +34,7 @@ A comprehensive, interactive online quiz application built with HTML, CSS, and J
 - **Progressive Web App Ready**: Works offline and can be installed
 - **Cross-browser Compatible**: Works on all modern browsers
 
+
 ## 🚀 Getting Started
 
 ### Prerequisites
