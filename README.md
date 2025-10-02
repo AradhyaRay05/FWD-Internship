@@ -42,8 +42,6 @@ A comprehensive, interactive online quiz application built with HTML, CSS, and J
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Internet connection (for online quizzes)
 
----
-
 ## 📖 How to Use
 
 ### 1. Getting Started
